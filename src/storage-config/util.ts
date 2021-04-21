@@ -18,6 +18,9 @@ export function coldObjToMessage(obj: ColdConfig.AsObject): ColdConfig {
     fc.setMaxPrice(obj.filecoin.maxPrice)
     fc.setReplicationFactor(obj.filecoin.replicationFactor)
     fc.setTrustedMinersList(obj.filecoin.trustedMinersList)
+    fc.setVerifiedDeal(obj.filecoin.verifiedDeal)
+    fc.setDealStartOffset(obj.filecoin.dealStartOffset)
+    fc.setFastRetrieval(obj.filecoin.fastRetrieval)
     if (obj.filecoin.renew) {
       const renew = new FilRenew()
       renew.setEnabled(obj.filecoin.renew.enabled)
